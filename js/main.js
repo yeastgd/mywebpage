@@ -2,6 +2,23 @@ document.getElementById('btn-view-projects')?.addEventListener('click', () => {
   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
 });
 
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
 const contactForm = document.querySelector('.contact-form');
 const formStatus = contactForm?.querySelector('.form-status');
 
