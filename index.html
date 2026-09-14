@@ -17,18 +17,14 @@
 <!-- NAV -->
 <nav>
   <div class="logo">Sofia Orieshkina</div>
-  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-links" id="nav-links">
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact Me</a>
-    <a href="docs/sofia_cv.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta-mobile">My CV ✦</a>
   </div>
-  <a href="docs/sofia_cv.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta-desktop">My CV ✦</a>
+  <a href="docs/orisof_cv.pdf" class="nav-cta" download>My CV ✦</a>
 </nav>
 
 <!-- HERO -->
@@ -39,7 +35,7 @@
     <p class="hero-desc">Building web applications and AI-powered tools. Currently interning at Ericsson.</p>
     <div class="hero-btns">
       <button type="button" class="btn-p" id="btn-view-projects">View Projects ↓</button>
-      <a href="docs/sofia_cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-o" download>Download CV</a>
+      <a href="docs/orisof_cv.pdf" class="btn-o" download>Download CV</a>
     </div>
   </div>
   <div class="hero-right">
@@ -126,8 +122,12 @@
       <div class="featured-badge">✦ Featured</div>
       <div class="p-num">01</div>
       <div class="p-name">ChillBill — AI-Powered Expense Sharing App</div>
-      <p class="p-desc">University and Microsoft collaboration. Expense splitting AI powered and natural language input for group finances.</p>
-      <p class="p-desc" style="font-size:0.85rem;opacity:0.75;font-style:italic;">⚠ Live demo currently unavailable — migrating the backend from Azure Functions to a new system.</p>
+      <p class="p-desc">FFull-stack web app for splitting bills and tracking personal spending via AI-powered receipt OCR (Azure Document Intelligence).
+        Designed a 7-entity relational schema and implemented a debt-reduction algorithm to minimize the number of repayment transactions in group settlements.
+        Frontend built with React; serverless backend built with Python (Azure Functions), with data in Azure SQL and receipt images in Blob Storage.
+        Built a self-hosted deployment option (Docker Compose) running frontend, backend, database, and local AI inference entirely on user-owned infrastructure.
+        Validated with 12 end-to-end system tests covering authentication, all three split modes, debt optimization, and session persistence — full pass.
+        Full technical report available on personal site (link coming soon)</p>
       <div class="p-tags">
         <span class="p-tag">React</span>
         <span class="p-tag">Python (Azure Functions)</span>
@@ -136,9 +136,8 @@
         <span class="p-tag">Docker Compose</span>
       </div>
       <div class="p-links">
-        <a href="https://github.com/AI-powered-expense-sharing-app" target="_blank" rel="noopener noreferrer" class="p-btn">GitHub →</a>
+        <button type="button" class="p-btn">GitHub →</button>
         <button type="button" class="p-btn">Live Demo →</button>
-        <a href="docs/microsoft_team_4_report.pdf" target="_blank" rel="noopener noreferrer" class="p-btn">Report →</a>
       </div>
     </div>
     <div class="pcard">
@@ -152,8 +151,8 @@
         <span class="p-tag">unpdf</span>
       </div>
       <div class="p-links">
-        <a href="https://github.com/yeastgd/smart-cv-reviewer" target="_blank" rel="noopener noreferrer" class="p-btn">GitHub →</a>
-        <a href="https://smart-cv-reviewer.vercel.app" target="_blank" rel="noopener noreferrer" class="p-btn">Live Demo →</a>
+        <button type="button" class="p-btn">GitHub →</button>
+        <button type="button" class="p-btn">Live Demo →</button>
       </div>
     </div>
     <div class="pcard">
@@ -165,7 +164,7 @@
         <span class="p-tag">Control Theory</span>
       </div>
       <div class="p-links">
-        <a href="docs/mass_spring_damper_report.pdf" target="_blank" rel="noopener noreferrer" class="p-btn">Report →</a>
+        <button type="button" class="p-btn">Details →</button>
       </div>
     </div>
     <div class="pcard">
@@ -177,7 +176,7 @@
         <span class="p-tag">Design Research</span>
       </div>
       <div class="p-links">
-        <a href="docs/dcg_lamp_report.pdf" target="_blank" rel="noopener noreferrer" class="p-btn">Report →</a>
+        <button type="button" class="p-btn">Details →</button>
       </div>
     </div>
   </div>
@@ -264,13 +263,12 @@
         </a>
       </div>
     </div>
-    <form class="form-card contact-form" action="https://formspree.io/f/xlgyypvn" method="POST">
+    <form class="form-card contact-form">
       <label for="contact-email">Your email</label>
-      <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+      <input type="email" id="contact-email" name="email" placeholder="your@email.com">
       <label for="contact-message">Message</label>
-      <textarea id="contact-message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+      <textarea id="contact-message" name="message" placeholder="Tell me about your project or opportunity..."></textarea>
       <button type="submit" class="sbtn">Send Message ✦</button>
-      <p class="form-status" style="display:none;margin-top:0.8em;font-size:0.9rem;"></p>
     </form>
   </div>
 </section>
